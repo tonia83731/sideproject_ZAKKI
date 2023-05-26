@@ -1,7 +1,4 @@
 
-
-
-
 // unordered list
 export function UnorderedList({className, data}){
   const listItems = data.map((item) => {
@@ -38,6 +35,18 @@ export function CheckBoxInput({className, id, value, name}){
     <div className={`input-group ${className}`}>
       <input type="checkbox" id={id} name={id} value={value}/>
       <label for={id} className="input-label">{name}</label>
+    </div>
+  )
+}
+
+// default title
+export function DefaulTitle({title, subtitle}){
+  return(
+    <div className="page-start">
+      <h3 className="main-title_with-border">{title}</h3>
+      <p className="sub-title">
+        {subtitle}
+      </p>
     </div>
   )
 }

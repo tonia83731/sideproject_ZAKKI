@@ -1,0 +1,116 @@
+@mixin previewItem($title-size, $value-size){
+  .preview-title{
+    @include font-adjust($title-size, 700, var(--sub-heading-dark));
+  }
+  .preview-value{
+    @include font-adjust($value-size, 400, var(--body-dark))
+  }
+  @content;
+}
+
+
+
+
+form[data-phase="preview"] {
+  padding: 12px 0;
+
+  .form-body {
+    .info-preview{
+      border-bottom: 2px solid var(--break-line);
+      padding-bottom: 16px;
+      .info-preview-list{
+        .info-preview-item{
+          display: flex;
+          justify-content: space-between;
+          align-items: end;
+          @include previewItem(14px, 12px);
+          &:not(:last-child) {
+            padding-bottom: 8px;
+            border-bottom: 0.5px solid var(--box-border);
+          }
+          &:not(:first-child){
+            padding-top: 8px;
+          }
+        }
+      }
+    }
+    .doc-preview{
+      padding-top: 16px;
+      .doc-preview-list {
+        .doc-preview-item {
+          display: flex;
+          justify-content: space-between;
+          @include previewItem(14px,
+            12px);
+    
+          &:not(:last-child) {
+            padding-bottom: 8px;
+            border-bottom: 0.5px solid var(--box-border);
+          }
+          &:not(:first-child) {
+            padding-top: 8px;
+          }
+          &:last-child{
+            .preview-value{
+              width: 200px;
+              word-break: break-all;
+            }
+          }
+        }
+      }
+    }
+   
+  }
+}
+
+@media screen and (min-width:768px) {
+  form[data-phase="preview"] {
+    .form-body {
+      .info-preview {
+        .info-preview-list {
+          .info-preview-item {
+            @include previewItem(16px, 14px);
+          }
+        }
+      }
+
+      .doc-preview {
+        .doc-preview-list {
+          .doc-preview-item {
+            @include previewItem(16px, 14px);
+            &:last-child {
+              .preview-value {
+                width: 400px;
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+
+
+@media screen and (min-width: 1080px) {
+  form[data-phase="preview"] {
+    .form-body {
+      .info-preview {
+        .info-preview-list {
+          .info-preview-item {
+            @include previewItem(18px, 16px);
+          }
+        }
+      }
+
+      .doc-preview {
+        .doc-preview-list {
+          .doc-preview-item {
+            @include previewItem(18px, 16px);
+          }
+        }
+      }
+
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.progress-control-container{
+  max-width: 760px;
+  margin: 0 auto;
+  .button-group {
+    display: flex;
+    justify-content: end;
+    padding: 8px 0;
+
+    button {
+      min-width: 80px;
+      width: 100px;
+
+      &.prev {
+        margin-right: 4px;
+      }
+
+      &.next {
+        margin-left: 4px;
+      }
+    }
+  }
+
+  .button-group-done {
+    padding: 8px 0 16px;
+    display: flex;
+    justify-content: center;
+    button{
+      min-width: 120px;
+      width: 210px;
+    }
+  }
+}
+
+@media screen and (min-width:768px) {
+
+  .progress-control-container{
+    .button-group{
+      button {
+        width: 120px;
+        height: 30px;
+      }
+    }
+    .button-group-done {
+      button {
+        height: 30px;
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 1080px) {
+  .progress-control-container {
+    .button-group {
+      button {
+        width: 180px;
+        height: 36px;
+      }
+    }
+
+    .button-group-done {
+      button {
+        height: 36px;
+      }
+    }
+  }
+}

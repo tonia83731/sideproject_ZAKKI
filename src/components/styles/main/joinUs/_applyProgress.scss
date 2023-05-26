@@ -1,0 +1,134 @@
+.apply-progress-container{
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .progress-group{
+    text-align: center;
+    .progress-icon-group{
+      display:inline-block;
+      width: 15px;
+      height: 15px;
+      border: 3px solid var(--box-border);
+      border-radius: 50%;
+      margin-bottom: 4px;
+      position: relative;
+      .progress-icon{
+        // @include svg-adjust(12px, var(--body-light))
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+    }
+  .progress-label {
+    @include font-adjust(12px, 400, var(--box-border))
+  }
+  &.ongoing{
+    .progress-icon-group{
+      border: 3px solid var(--done-border-bar);
+      background: var(--done-border-bar);
+    }
+    .progress-label{
+      @include font-adjust(12px, 400, var(--done-border-bar));
+    }
+  }
+  &.done{
+    .progress-icon-group{
+      border: 3px solid var(--done-border-bar);
+      background: var(--done-border-bar);
+      .progress-icon{
+        display: block;
+        transform: translate(-50%, -50%);
+        @include svg-adjust(12px, var(--body-light))
+      }
+    }
+    .progress-label {
+      @include font-adjust(12px, 400, var(--done-border-bar));
+    }
+  }
+  }
+  .progress-bar{
+    width: 60px;
+    height: 2px;
+    border-top: 2px dotted var(--box-border);
+    &.done{
+      border-top: 2px solid var(--done-border-bar);
+    }
+  }
+}
+
+
+@media screen and (min-width:768px) {
+  .apply-progress-container {
+    .progress-group {
+      .progress-icon-group {
+        width: 20px;
+        height: 20px;
+        margin-bottom: 8px;
+      }
+      .progress-label {
+        font-size: 14px;
+      }
+      &.ongoing {
+        .progress-label {
+          font-size: 14px;
+        }
+      }
+
+      &.done {
+        .progress-icon-group {
+          .progress-icon {
+            @include svg-adjust(16px, var(--body-light))
+          }
+        }
+        .progress-label {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .progress-bar {
+      width: 100px;
+    }
+  } 
+}
+
+
+@media screen and (min-width: 1080px) {
+  .apply-progress-container {
+    .progress-group {
+      .progress-icon-group {
+        width: 24px;
+        height: 24px;
+        margin-bottom: 8px;
+      }
+      .progress-label {
+        font-size: 16px;
+      }
+
+      &.ongoing {
+        .progress-label {
+          font-size: 16px;
+        }
+      }
+
+      &.done {
+        .progress-icon-group {
+          .progress-icon {
+            @include svg-adjust(20px, var(--body-light))
+          }
+        }
+
+        .progress-label {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .progress-bar {
+      width: 180px;
+    }
+  }
+}

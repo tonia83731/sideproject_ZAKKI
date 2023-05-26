@@ -1,0 +1,109 @@
+form[data-phase="document"] {
+  padding: 12px 0;
+
+  .form-body {
+    .input-file-group {
+      margin-bottom: 12px;
+      display: flex;
+      flex-direction: column;
+      
+      .label-file-item {
+        margin-bottom: 8px;
+        @include font-adjust(14px, 700, var(--sub-heading-dark));
+
+        span {
+          color: var(--body-important);
+        }
+      }
+
+      .input-file-item{
+        width: 100%;
+        height: 90px;
+        border: 1px solid var(--box-border);
+        border-radius: 5px;
+        text-align-last: center;
+        line-height: 90px;
+        @include font-adjust(12px, 400, var(--caption-grey));
+      }
+    }
+    .input-textarea-group{
+      margin-bottom: 12px;
+      display: flex;
+      flex-direction: column;
+      .input-label{
+        margin-bottom: 8px;
+        @include font-adjust(14px, 700, var(--sub-heading-dark));
+      
+        span {
+          color: var(--body-important);
+        }
+      }
+      textarea{
+        width: 100%;
+        height: 90px;
+        border: 1px solid var(--box-border);
+        border-radius: 5px;
+        padding-left: 10px;
+        padding-top: 10px;
+        @include font-adjust(12px, 400, var(--caption-grey));
+      }
+    }
+  }
+}
+
+@media screen and (min-width:768px) {
+  form[data-phase="document"] {
+    .form-body {
+      .input-file-group {
+        margin-bottom: 16px;
+        .label-file-item {
+          font-size: 16px;
+        }
+
+        .input-file-item {
+          font-size: 14px;
+        }
+      }
+
+      .input-textarea-group {
+        margin-bottom: 16px;
+        .input-label {
+          font-size: 16px;
+        }
+
+        textarea {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 1080px) {
+  form[data-phase="document"] {
+    .form-body {
+      .input-file-group {
+        .label-file-item {
+          font-size: 18px;
+        }
+
+        .input-file-item {
+          font-size: 16px;
+        }
+      }
+
+      .input-textarea-group {
+        margin-bottom: 18px;
+
+        .input-label {
+          font-size: 18px;
+        }
+
+        textarea {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

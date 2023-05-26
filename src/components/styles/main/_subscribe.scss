@@ -1,0 +1,98 @@
+.subscribe{
+  .subscribe-container{
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 24px 0;
+    .subscribe-label{
+      @include font-adjust(16px, 700, var(--main-heading-dark));
+    }
+    .subscribe-input-area{
+      margin-top: 16px;
+      height: 32px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .subscribe-input{
+        height: 100%;
+        width: 70%;
+        border: 1px solid var(--btn-bg-light-green);
+        border-radius: 5px 0 0 5px;
+        padding-left: 10px;
+        &:focus{
+          border: 2px solid var(--btn-bg-dark-green);
+        }
+        &::placeholder{
+          @include font-adjust(12px, 400, var(--caption-grey));
+        }
+      }
+      .subscribe-submit{
+        height: 100%;
+        width: 30%;
+        min-width: 96px;
+        background-color: var(--btn-bg-light-green);
+        border: none;
+        border-radius: 0 5px 5px 0;
+        padding: 0 10px;
+        @include font-adjust(14px, 700, var(--main-heading-light));
+      }
+    }
+  }
+}
+
+@media screen and (min-width:768px) {
+  .subscribe {
+    .subscribe-container {
+      width: 60%;
+
+      .subscribe-label {
+        font-size: 20px;
+      }
+      .subscribe-input-area {
+        height: 36px;;
+        .subscribe-input {
+          &::placeholder {
+            font-size: 14px;
+          }
+        }
+        .subscribe-submit {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+}
+
+
+@media screen and (min-width: 1080px) {
+  .subscribe {
+    .subscribe-container {
+      width: 90%;
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .subscribe-label {
+        font-size: 24px;
+        width: 50%;
+      }
+
+      .subscribe-input-area {
+        height: 36px;
+        width: 50%;
+
+        .subscribe-input {
+          &::placeholder {
+            font-size: 16px;
+          }
+        }
+        .subscribe-submit {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

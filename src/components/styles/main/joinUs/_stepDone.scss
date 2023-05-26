@@ -1,0 +1,10 @@
+form[data-phase="submit"]{
+  padding: 12px 0;
+  .form-body {
+    .thankyouImg{
+      width: 100%;  
+      max-width: 760px;
+      margin: 0 auto;
+    }
+  }
+}

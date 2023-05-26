@@ -1,0 +1,133 @@
+.form-title{
+  @include font-adjust(14px, 500, var(--sub-heading-dark));
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+form[data-phase="basic-info"]{
+  padding: 12px 0;
+  .form-body{
+    .input-group{
+      margin-bottom: 12px;
+      &.checkbox-group {
+        padding-top: 8px;
+      }
+      .input-label{
+        margin-bottom: 8px;
+        @include font-adjust(14px, 700, var(--sub-heading-dark));
+        span{
+          color: var(--body-important);
+        }
+      }
+      .input-normal{
+        width: 100%;
+        height: 36px;
+        border: 1px solid var(--box-border);
+        border-radius: 5px;
+        padding-left: 10px;
+        &::placeholder{
+          @include font-adjust(12px, 400, var(--caption-grey));
+        }
+      }
+      .input-radio-group{
+        width: 100%;
+        display:grid;
+        &.location-radio{
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 8px;
+        }
+        &.time-radio{
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          grid-gap: 8px;
+        }
+        .label-radio-item{
+          padding-left: 4px;
+          @include font-adjust(14px, 400, var(--body-dark));
+        }
+      }
+      .input-checkbox-group{
+        width: 100%;
+        .label-checkbox-item{
+          padding-left: 4px;
+          @include font-adjust(12px, 400, var(--body-dark));
+          a{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+@media screen and (min-width:768px) {
+  .form-title{
+    font-size: 16px;
+  }
+  form[data-phase="basic-info"] {
+    .form-body {
+      .input-group {
+        margin-bottom: 16px;
+        .input-label {
+          font-size: 16px;
+        }
+
+        .input-normal {
+          &::placeholder {
+            font-size: 14px;
+          }
+        }
+
+        .input-radio-group {
+          .label-radio-item {
+            font-size: 16px;
+          }
+        }
+
+        .input-checkbox-group {
+          .label-checkbox-item {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 1080px) {
+  .form-title {
+    font-size: 18px;
+  }
+  form[data-phase="basic-info"] {
+    .form-body {
+      .input-group {
+        .input-label {
+          font-size: 18px;
+        }
+
+        .input-normal {
+          &::placeholder {
+            font-size: 16px;
+          }
+        }
+
+        .input-radio-group {
+          .label-radio-item {
+            font-size: 18px;
+          }
+        }
+
+        .input-checkbox-group {
+          .label-checkbox-item {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}

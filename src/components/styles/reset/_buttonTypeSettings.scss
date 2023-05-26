@@ -1,0 +1,41 @@
+
+.light-green-btn {
+  @include font-adjust(14px, 700, var(--btn-font-white));
+  background-color: var(--btn-bg-light-green);
+  border-radius: 5px;
+  padding: 3px 10px;
+}
+
+.dark-green-btn {
+  @include font-adjust(14px, 700, var(--btn-font-white));
+  background-color: var(--btn-bg-dark-green);
+  border-radius: 5px;
+}
+
+.border-btn {
+  @include font-adjust(14px, 700, var(--btn-font-dark-green));
+  border: 2px solid var(--btn-border-dark-green);
+  border-radius: 5px;
+}
+
+.non-border-btn-green {
+  @include font-adjust(14px, 700, var(--btn-bg-light-green));
+  background-color: transparent;
+}
+
+
+@media screen and (min-width:768px) {
+  .light-green-btn, .dark-green-btn, .border-btn, .non-border-btn-green {
+    font-size: 16px;
+  }
+}
+
+
+@media screen and (min-width: 1080px) {
+  .light-green-btn,
+  .dark-green-btn,
+  .border-btn,
+  .non-border-btn-green {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,47 @@
+.job-option-container{
+  margin-bottom: 60px;
+  .job-apply-card {
+    @include cover-bg(100%, 150px, 10px);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
+    .card-body{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: var(--card-bg);
+      width: 100%;
+      padding: 8px 16px;
+      .card-body-title {
+      // width: 95%;
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+        .card-title {
+          @include font-adjust(16px, 700, var(--btn-font-dark-green));
+        }
+        .card-info {
+          @include font-adjust(12px, 400, var(--btn-font-dark-green));
+          text-decoration: underline;
+          &:hover{
+            font-weight: 700;
+          }
+        }
+      }
+      .card-body-content {
+        .card-item {
+          &:last-child{
+            padding-left: 8px;
+          }
+          .card-item-icon {
+            @include svg-adjust(12px, var(--caption-green));
+          }
+
+          .card-item-body {
+            padding-left: 4px;
+            @include font-adjust(12px, 400, var(--caption-green));
+          }
+        }
+      }
+    }
+  }
+}
