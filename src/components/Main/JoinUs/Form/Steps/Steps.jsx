@@ -7,7 +7,7 @@ import StepDone from './StepDone'
 export default function Steps(){
   return(
     <section className="form-section">
-      {/* <StepOne/> */}
+      <StepOne/>
       {/* <StepTwo/> */}
       {/* <StepThree/> */}
       {/* <StepDone/> */}

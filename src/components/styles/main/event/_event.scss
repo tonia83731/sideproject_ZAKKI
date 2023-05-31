@@ -1,0 +1,19 @@
+.event-container{
+  @include default-container;
+  padding: 2em 0 2.5em;
+}
+
+.recommend-event{
+  .main-title{
+    padding-bottom: 2em;
+  }
+  padding-bottom: 2em;
+}
+.event-list{
+  .main-title {
+    padding-bottom: 2em;
+  }
+}
+
+@import './recommendevent';
+@import './eventList'

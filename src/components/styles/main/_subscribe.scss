@@ -5,7 +5,7 @@
     margin: 0 auto;
     padding: 24px 0;
     .subscribe-label{
-      @include font-adjust(16px, 700, var(--main-heading-dark));
+      @include font-adjust(1.2em, 700, var(--main-heading-dark));
     }
     .subscribe-input-area{
       margin-top: 16px;
@@ -24,7 +24,7 @@
           border: 2px solid var(--btn-bg-dark-green);
         }
         &::placeholder{
-          @include font-adjust(12px, 400, var(--caption-grey));
+          @include font-adjust(0.8em, 400, var(--caption-grey));
         }
       }
       .subscribe-submit{
@@ -35,7 +35,7 @@
         border: none;
         border-radius: 0 5px 5px 0;
         padding: 0 10px;
-        @include font-adjust(14px, 700, var(--main-heading-light));
+        @include font-adjust(1em, 700, var(--main-heading-light));
       }
     }
   }
@@ -45,20 +45,8 @@
   .subscribe {
     .subscribe-container {
       width: 60%;
-
-      .subscribe-label {
-        font-size: 20px;
-      }
       .subscribe-input-area {
         height: 36px;;
-        .subscribe-input {
-          &::placeholder {
-            font-size: 14px;
-          }
-        }
-        .subscribe-submit {
-          font-size: 16px;
-        }
       }
     }
   }
@@ -76,22 +64,12 @@
       align-items: center;
 
       .subscribe-label {
-        font-size: 24px;
         width: 50%;
       }
 
       .subscribe-input-area {
         height: 36px;
         width: 50%;
-
-        .subscribe-input {
-          &::placeholder {
-            font-size: 16px;
-          }
-        }
-        .subscribe-submit {
-          font-size: 16px;
-        }
       }
     }
   }

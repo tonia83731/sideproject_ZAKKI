@@ -3,25 +3,51 @@
 @import './reset/colorSetting';
 @import './reset/buttonTypeSettings';
 @import './reset/defaultTitle';
-@import './reset/search';
+@import './reset/pagination';
 
 @import './header';
 
-.main-container{
-  padding-top: 45px + 20px;
+@import './main/Home/homeCarousel';
+@import './main/Home/aboutus';
+
+@import './main/stories/stories';
+
+
+
+
+// font adjust
+body {
+  @include font-adjust(14px, 400, var(--body-dark));
+}
+.main-container {
+  padding-top: 45px;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width:768px) {
+  body {
+    font-size: 16px;
+  }
   .main-container {
-    padding-top: 60px + 20px;
+    padding-top: 60px;
   }
 }
 
-@import './main/program';
+@media screen and (min-width:1080px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+@import './main/program/search';
+@import './main/program/program';
+@import './main/oneProgram/oneProgram';
+@import './main/team/team';
 @import './main/joinUs/joinUs';
+@import './main//event/event';
+@import './main/oneEvent/oneEvent';
 
 @import './main/subscribe';
 

@@ -15,15 +15,19 @@
   --header-bg: #ffffff;
   --footer-bg: rgb(97, 97, 97, 90);
   --nav-bg: rgb(255, 255, 255, 80%);
+  --filter-bg: rgb(158, 158, 158, 0.8);
 
   // btn color here
   --btn-bg-light-green: #1eba4b;
   --btn-bg-dark-green: #0a3e19;
   --btn-font-white: #ffffff;
+  --btn-bg-dark-green-hover: rgb(10, 62, 25, 0.3);
 
   --btn-bg-white: #ffffff;
   --btn-border-dark-green: #0a3e19;
   --btn-font-dark-green: #0a3e19;
+
+  --btn-hover: rgb(158, 158, 158, 0.2);
 
   --box-border: #d9d9d9;
   --done-border-bar: #1eba4b;
@@ -31,5 +35,18 @@
   --break-line: #9e9e9e;
 
   // card color here
-  --card-bg: rgb(255, 255, 255, 60%)
+  --card-bg: rgb(255, 255, 255, 60%);
+
+  --diagram-font: rgb(15, 93, 37, 0.8);
+
+  // scroll bar
+  --scrollbar-track: #ffffff;
+  --scrollbar-thumb: rgb(30, 186, 75, .5);
+  --scrollbar-thumb-hover: rgb(30, 186, 75);
+
+  // event list
+  --eventlist-border: rgb(30, 186, 75, .5);
+
+  // one event list
+  --circle-bg: #8FDDA5;
 }

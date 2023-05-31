@@ -9,8 +9,7 @@
 
 
 .form-container{
-  width: 90%;
-  margin: 0 auto;
+  @include default-container;
   .form-section{
     max-width: 760px;
     margin: 0 auto;
@@ -26,6 +25,12 @@
 
 
 @media screen and (min-width: 1080px) {
+  .join-us-container{
+    padding: 2em 0 2.5em;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 1em;
+  }
   .form-container {
     max-width: 1200px;
     margin: 0 auto;

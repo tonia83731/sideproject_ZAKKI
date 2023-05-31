@@ -32,3 +32,10 @@
   background-size: cover;
   border-radius: $radius;
 }
+
+// default container
+@mixin default-container{
+  width: 90%;
+  margin: 0 auto;
+  // padding: 1em 0 3em;
+}

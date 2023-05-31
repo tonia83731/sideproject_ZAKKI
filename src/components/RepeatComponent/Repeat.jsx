@@ -40,13 +40,28 @@ export function CheckBoxInput({className, id, value, name}){
 }
 
 // default title
-export function DefaulTitle({title, subtitle}){
+export function DefaultTitle({title, subtitle}){
   return(
     <div className="page-start">
       <h3 className="main-title_with-border">{title}</h3>
       <p className="sub-title">
         {subtitle}
       </p>
+    </div>
+  )
+}
+
+
+// pagination
+export function Pagination({data}){
+  const pageItem = data.map((page) => {
+    return (<a href="#" className={`page-link ${page.isActive === true ? "active" : ""}`} key={page.id}>{page.id}</a>)
+  })
+  return(
+    <div className="pagination">
+      <a href="" className="page-arrow">&laquo;</a>
+      {pageItem}
+      <a href="#" className="page-arrow">&raquo;</a>
     </div>
   )
 }

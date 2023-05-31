@@ -1,0 +1,61 @@
+.program-container{
+  @include default-container;
+  padding: 2em 0 2.5em;
+}
+
+.program-body{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 1em;
+}
+
+.program-card {
+  @include cover-bg(100%, 30vh, 10px);
+  min-height: 200px;
+  // max-height: 200px;
+  position: relative;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    min-height: 70px;
+    padding: 0.5em 1em;
+
+    .card-body-title {
+      margin-bottom: 0.5em;
+      min-height: 30px;
+      @include font-adjust(16px, 700, var(--btn-font-dark-green));
+    }
+
+    .card-body-content {
+      @include font-adjust(12px, 400, var(--caption-grey));
+    }
+  }
+}
+
+@media screen and (min-width:500px) {
+  .program-body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width:768px) {
+  .program-body {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+@media screen and (min-width: 1080px) {
+  .program-body {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

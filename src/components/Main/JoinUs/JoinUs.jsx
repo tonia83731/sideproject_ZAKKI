@@ -7,7 +7,7 @@ export default function JoinUs(){
   return(
     <section className="join-us">
       <div className="join-us-container">
-        {/* <JobOptions/> */}
+        <JobOptions/>
         <div className="form-container">
           <ApplyProgress/>
           <Steps/>

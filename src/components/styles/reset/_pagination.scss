@@ -1,0 +1,23 @@
+.pagination{
+  padding-top: 1em;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  // align-items: center;
+  .page-arrow, .page-link{
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    @include font-adjust(1em, 400, var(--body-dark));
+    &:hover{
+      background-color: var(--btn-hover);
+      border-radius: 5px;
+    }
+  }
+  .page-link.active{
+    border:1px solid var(--btn-bg-light-green);
+    border-radius: 5px;
+    color: var(--btn-bg-light-green);
+    font-weight: bold;
+  }
+}

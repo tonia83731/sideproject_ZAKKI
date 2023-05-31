@@ -14,11 +14,14 @@ body {
   padding: 0;
   font-family: "Open Sans", sans-serif;
   line-height: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 * {
   box-sizing: border-box;
 }
+
 
 h1,
 h2,
@@ -84,3 +87,4 @@ input:invalid {
 .cursor-point {
   cursor: pointer;
 }
+
