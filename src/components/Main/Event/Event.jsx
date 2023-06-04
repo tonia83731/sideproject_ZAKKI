@@ -3,6 +3,7 @@ import {Search} from "../Program/Program";
 
 import RecommendEvent from "./RecommendEvent";
 import EventList from "./EventList";
+import Subscribe from "../Subscribe";
 
 const pageData=[
   {
@@ -29,21 +30,26 @@ const pageData=[
 
 export default function Event(){
   return(
-    <section className="event">
-      <div className="event-container">
-        <DefaultTitle title="Our Event" subtitle="Other ways to support those who need.
-Attend our event to know how our program process"/>
-        <Search/>
-        <div className="recommend-event">
-          <h3 className="main-title">Recommended Event</h3>
-          <RecommendEvent/>
-        </div>
-        <div className="event-list">
-          <h3 className="main-title">Event List</h3>
-          <EventList/>
-        </div>
-        <Pagination data={pageData}/>
+    <main className="site-main">
+      <div className="main-container">
+        <section className="event">
+          <div className="event-container">
+            <DefaultTitle title="Our Event" subtitle="Other ways to support those who need.
+    Attend our event to know how our program process"/>
+            <Search/>
+            <div className="recommend-event">
+              <h3 className="main-title">Recommended Event</h3>
+              <RecommendEvent/>
+            </div>
+            <div className="event-list">
+              <h3 className="main-title">Event List</h3>
+              <EventList/>
+            </div>
+            <Pagination data={pageData}/>
+          </div>
+        </section>
+        <Subscribe/>
       </div>
-    </section>
+    </main>
   )
 }

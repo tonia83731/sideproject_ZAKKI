@@ -12,7 +12,7 @@ export default function Main(){
   return (
     <main className="site-main">
       <div className="main-container">
-        {/* <Stories/> */}
+        {/* <Stories/>*/}
         {/* <Program/> */}
         {/* <JoinUs/> */}
         {/* <Event/> */}
@@ -22,7 +22,7 @@ export default function Main(){
       </div>
       <>
         {/* <Team/> */}
-        <OneEvent/>
+        {/* <OneEvent/> */}
       </>
     </main>
   )

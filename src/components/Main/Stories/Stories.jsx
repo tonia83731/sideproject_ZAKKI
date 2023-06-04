@@ -5,6 +5,8 @@ import { ReactComponent as Volunteer } from "../../Assets/Img/Story/volunteer.sv
 import { ReactComponent as CommaUp } from "../../Assets/Img/Story/CommaUp.svg"
 import { ReactComponent as CommaDown } from "../../Assets/Img/Story/CommaDown.svg"
 
+import Subscribe from "../Subscribe"
+
 function BeneficiaryStory(){
   return(
     <section className="beneficiary-story">
@@ -60,15 +62,20 @@ function VolunteerStory(){
 }
 
 export default function Stories(){
-  return(
-    <section className="stories">
-      <div className="stories-container">
-        <DefaultTitle title="Our Stories" subtitle="Listen to the beneficiary partner and our volunteers about their ZAKKI participate experience"/>
-        <div>
-          <BeneficiaryStory/>
-          <VolunteerStory/>
+  return( 
+    <main className="site-main">
+      <div className="main-container">
+        <section className="stories">
+        <div className="stories-container">
+          <DefaultTitle title="Our Stories" subtitle="Listen to the beneficiary partner and our volunteers about their ZAKKI participate experience"/>
+          <div>
+            <BeneficiaryStory/>
+            <VolunteerStory/>
+          </div>
         </div>
+        </section>
+        <Subscribe/>
       </div>
-    </section>
+    </main>
   )
 }

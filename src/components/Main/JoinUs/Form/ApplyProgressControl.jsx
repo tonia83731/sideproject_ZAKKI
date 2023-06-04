@@ -1,39 +1,60 @@
+import { Link } from "react-router-dom"
 
-function NextStep(){
+function NextStep({onClick}){
   return (
     <>
-      <button className="next light-green-btn">Next &#8250;</button>
+      <button className="next light-green-btn" onClick={onClick}>Next &#8250;</button>
     </>
   )
 }
 
-function PreviousStep(){
+function PreviousStep({onClick}){
   return (
     <>
-      <button className="prev non-border-btn-green">&lsaquo; Previous</button>
+      <button className="prev non-border-btn-green" onClick={onClick}>&lsaquo; Previous</button>
     </>
   )
 }
 
+function ApplyProgressControlChange({phase, onClick}){
+  if(phase === 'basic-info') {
+    return (
+      <section className="button-group" data-phase="basic-info">
+        <NextStep onClick={onClick}/>
+      </section>
+    )
+  }
+  if(phase === 'document') {
+    return (
+      <section className="button-group" data-phase="document">
+        <PreviousStep onClick={onClick}/>
+        <NextStep onClick={onClick}/>
+      </section>
+    )
+  }
+  if(phase === 'preview') {
+    return (
+      <section className="button-group" data-phase="preview">
+        <PreviousStep onClick={onClick}/>
+        <button className="next submit light-green-btn" onClick={onClick}>Submit</button>
+      </section>
+    )
+  }
+  if(phase === 'submit') {
+   return(
+    <section className="button-group-done" data-phase="submit">
+      <Link to="/" className="light-green-btn back-home">Back to Home</Link>
+    </section>
+   )  
+  }
+}
 
-export default function ApplyProgressControl(){
+
+export default function ApplyProgressControl({phase, onClick}){
   return(
     <section className="apply-progress-control">
       <div className="progress-control-container">
-        <section className="button-group" data-phase="basic-info">
-          <NextStep/>
-        </section>
-        {/* <section className="button-group" data-phase="document">
-          <PreviousStep/>
-          <NextStep/>
-        </section>
-        <section className="button-group" data-phase="preview">
-          <PreviousStep/>
-          <button className="next submit light-green-btn">Submit</button>
-        </section>
-        <section className="button-group-done" data-phase="submit">
-          <button className="light-green-btn">Back to Home</button>
-        </section> */}
+        <ApplyProgressControlChange phase={phase} onClick={onClick}/>
       </div>
     </section>
   )

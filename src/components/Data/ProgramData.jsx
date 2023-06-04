@@ -5,7 +5,7 @@ const dummyProgram = [
     update: "4/18/2023",
     url: "https://picsum.photos/300?text=1",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent purus justo, feugiat et orci id, iaculis cursus turpis. Ut dapibus, enim vel feugiat commodo, tortor.",
-    event: []
+    
   },
   {
     id: 2,

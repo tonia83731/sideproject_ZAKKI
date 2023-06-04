@@ -24,9 +24,12 @@
     padding: 8px 0 16px;
     display: flex;
     justify-content: center;
-    button{
+    .back-home{
+      text-align: center;
       min-width: 120px;
       width: 210px;
+      height: 40px;
+      line-height: 40px;
     }
   }
 }

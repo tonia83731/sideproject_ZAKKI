@@ -5,6 +5,7 @@ import {ReactComponent as Filter} from '../../Assets/svg/filter.svg'
 import {ReactComponent as Checked} from '../../Assets/svg/Checked.svg'
 
 import ProgramData from "../../Data/ProgramData";
+import Subscribe from "../Subscribe";
 
 const programFilterData = [
   {
@@ -95,14 +96,19 @@ export function Search(){
 
 export default function Program(){
   return(
-    <section className="program">
-      <div className="program-container">
-        <DefaultTitle title="Our Program" subtitle="Our program consists of healthcare check-up, elderly training/workshops, tai chi, and many more. Let’s explore below."/>
-        <Search/>
-        <div className="program-body">
-          <ProgramData/>
-        </div>
+    <main className="site-main">
+      <div className="main-container">
+        <section className="program">
+          <div className="program-container">
+            <DefaultTitle title="Our Program" subtitle="Our program consists of healthcare check-up, elderly training/workshops, tai chi, and many more. Let’s explore below."/>
+            <Search/>
+            <div className="program-body">
+              <ProgramData/>
+            </div>
+          </div>
+        </section>
+        <Subscribe/>
       </div>
-    </section>
+    </main>
   )
 }
