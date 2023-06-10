@@ -1,4 +1,4 @@
-const dummyProgramData = [
+export const dummyProgramData = [
   {
     id: 1,
     title: "Helping Ana to Sell Grass Jelly",

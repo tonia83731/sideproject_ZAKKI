@@ -1,4 +1,4 @@
-const EventData = [
+export const dummyEventData = [
   {
     id: 1,
     title: "Support Ana 01",
