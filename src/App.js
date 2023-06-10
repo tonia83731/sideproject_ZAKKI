@@ -8,6 +8,7 @@ import Stories from './components/Main/Stories/Stories'
 import Program from './components/Main/Program/Program'
 import Event from './components/Main/Event/Event'
 import JoinUs from './components/Main/JoinUs/JoinUs'
+import Team from './components/Main/Team/Team'
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -25,6 +26,7 @@ function App() {
             <Route path="programs" element={<Program/>}></Route>
             <Route path="events" element={<Event/>}></Route>
             <Route path="joinus" element={<JoinUs/>}/>
+            <Route path="team" element={<Team/>}/>
           </Routes>
         </BrowserRouter>
       <Footer/>
